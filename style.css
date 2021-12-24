@@ -16,7 +16,8 @@ body {
   height: 482px;
   background-color: aliceblue;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sizeSelect {

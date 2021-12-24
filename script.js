@@ -1,5 +1,6 @@
 let gridContainer = document.getElementById("gridContainer");
 let cellSize = document.querySelector("#select1");
+let clear = document.getElementById("clear");
 id_number = '';
 let cell = [];
 size = cellSize.value;
@@ -25,6 +26,10 @@ function sketch(){
             square.style.backgroundColor = 'black';
     });
 });
+    clear.addEventListener('click', () => {cells.forEach((square) => {
+        square.style.backgroundColor = 'rgb(175, 213, 247)';
+    })
+});
 }
 
 function removeAllChildNodes(parent) {
@@ -33,9 +38,6 @@ function removeAllChildNodes(parent) {
     }
 }
 
-
-drawGrid(gridLoop);
-
 cellSize.addEventListener('change', () => {
     gridContainer.style.setProperty('grid-template-columns', 'repeat(auto-fill, '+cellSize.value+'px)');
     removeAllChildNodes(gridContainer);
@@ -43,14 +45,7 @@ cellSize.addEventListener('change', () => {
     drawGrid(loops);
 });
 
-//coloring the cells
 
-
-
-
-
-
-//adjust grid size
 //add eraser and pen tool
 //add choose your color option
 //clear option
