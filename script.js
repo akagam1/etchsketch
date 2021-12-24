@@ -2,6 +2,7 @@ let gridContainer = document.getElementById("gridContainer");
 id_number = '';
 let cell = [];
 
+//creates the grid
 for (let i = 0; i<=239; i++) {
     cell[i] = document.createElement('div');
     cell[i].classList.add('square')
@@ -12,9 +13,14 @@ for (let i = 0; i<=239; i++) {
     gridContainer.appendChild(cell[i]);
 }
 
+//coloring the cells
 const cells = document.querySelectorAll('.square');
 cells.forEach((square) => {
-    square.addEventListener('mousemove', ()=>{
-        square.style.backgroundColor = 'black';
+    square.addEventListener('mouseover', ()=>{
+            square.style.backgroundColor = 'black';
     });
 });
+
+//add eraser and pen tool
+//add choose your color option
+//clear option
