@@ -5,25 +5,53 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: rgb(45, 71, 65);
+}
+
+.menu {
+  padding: 5px;
+  border: 5px solid rgb(242, 141, 124);
+  border-radius: 5px;
+  width: 200px;
+  height: 482px;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.sizeSelect {
+  width: 100px;
+  background-color: aquamarine;
+  text-align: center;
+  max-height: fit-content;
+}
+
+.container {
+  display:inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
-    width: 482px;
-    height: 482px;
-    background-color: rgb(214, 232, 248);
+    width: 480px;
+    height: 510px;
+    background-color: rgb(175, 213, 247);
     border: 2px solid white;
     display: grid;
-    grid-template-columns: repeat(auto-fill,30px);
     
 }
+
+/*Header Rainbow effect*/
 
 .header {
   
     /* Font options */
    font-family: 'Pacifico', cursive;
    text-shadow: 2px 2px 4px #000000;
-   font-size:70px;
+   font-weight: bolder;
+   font-size:90px;
    
     /* Chrome, Safari, Opera */
    -webkit-animation: rainbow 5s infinite; 
