@@ -48,4 +48,3 @@ cellSize.addEventListener('change', () => {
 
 //add eraser and pen tool
 //add choose your color option
-//clear option

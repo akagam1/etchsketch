@@ -8,6 +8,23 @@ body {
     background-color: rgb(45, 71, 65);
 }
 
+#select1 {
+  width: 120px;
+  height:40px;
+  background-color: blue;
+  color: white;
+}
+
+#clear {
+  width: 120px;
+  height:40px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 10px;
+  background-color: red;
+}
+
 .menu {
   padding: 5px;
   border: 5px solid rgb(242, 141, 124);
@@ -18,11 +35,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .sizeSelect {
   width: 100px;
-  background-color: aquamarine;
   text-align: center;
   max-height: fit-content;
 }
@@ -51,60 +68,18 @@ body {
     /* Font options */
    font-family: 'Pacifico', cursive;
    text-shadow: 2px 2px 4px #000000;
+   -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
    font-weight: bolder;
    font-size:90px;
-   
-    /* Chrome, Safari, Opera */
-   -webkit-animation: rainbow 5s infinite; 
-   
-   /* Internet Explorer */
-   -ms-animation: rainbow 5s infinite;
-   
-   /* Standar Syntax */
-   animation: rainbow 5s infinite; 
- }
- 
- /* Chrome, Safari, Opera */
- @-webkit-keyframes rainbow{
-   0%{color: orange;}	
-   10%{color: purple;}	
-     20%{color: red;}
-   30%{color: CadetBlue;}
-     40%{color: yellow;}
-   50%{color: coral;}
-     60%{color: green;}
-   70%{color: cyan;}
-   80%{color: DeepPink;}
-   90%{color: DodgerBlue;}
-     100%{color: orange;}
- }
- 
- /* Internet Explorer */
- @-ms-keyframes rainbow{
-    0%{color: orange;}	
-   10%{color: purple;}	
-     20%{color: red;}
-   30%{color: CadetBlue;}
-     40%{color: yellow;}
-   50%{color: coral;}
-     60%{color: green;}
-   70%{color: cyan;}
-   80%{color: DeepPink;}
-   90%{color: DodgerBlue;}
-     100%{color: orange;}
- }
- 
- /* Standar Syntax */
- @keyframes rainbow{
-     0%{color: orange;}	
-   10%{color: purple;}	
-     20%{color: red;}
-   30%{color: CadetBlue;}
-     40%{color: yellow;}
-   50%{color: coral;}
-     60%{color: green;}
-   70%{color: cyan;}
-   80%{color: DeepPink;}
-   90%{color: DodgerBlue;}
-     100%{color: orange;}
- }
+   color: white;  
+}
+
+.footer {
+  width: 100%;
+  background-color: azure;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  font-size: 20px;
+}
