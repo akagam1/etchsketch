@@ -1,3 +1,9 @@
+//int generator for rgb codes
+function randInt() {
+    return Math.floor(Math.random()*256);
+}
+
+
 let gridContainer = document.getElementById("gridContainer");
 let cellSize = document.querySelector("#select1");
 let clear = document.getElementById("clear");
@@ -26,8 +32,11 @@ function toolChange(){
         if (toolType.value == '1') {
             isDraw = true;
         }
-        else {
+        if (toolType.value == '0'){
             isDraw = false;
+        }
+        if (toolType.value == '2') {
+            isDraw = 'multi';
         }
     });
 }
@@ -42,6 +51,9 @@ function sketch(){
             }
             if (isDraw == false) {
                 square.style.backgroundColor = 'rgb(175, 213, 247)';
+            }
+            if (isDraw == 'multi') {
+                square.style.backgroundColor = `rgb(${randInt()}, ${randInt()}, ${randInt()})`;
             }
     });
 });
@@ -65,5 +77,4 @@ cellSize.addEventListener('change', () => {
 });
 
 
-//add eraser and pen tool
-//add choose your color option
+//Rainbow colors
