@@ -1,6 +1,8 @@
 let gridContainer = document.getElementById("gridContainer");
 let cellSize = document.querySelector("#select1");
 let clear = document.getElementById("clear");
+let toolType = document.querySelector("#select2");
+let isDraw = true;
 id_number = '';
 let cell = [];
 size = cellSize.value;
@@ -19,11 +21,28 @@ function drawGrid(loop) {
     sketch();
 }
 
+function toolChange(){
+    toolType.addEventListener('change', () => {
+        if (toolType.value == '1') {
+            isDraw = true;
+        }
+        else {
+            isDraw = false;
+        }
+    });
+}
+
 function sketch(){
+    toolChange()
     let cells = document.querySelectorAll('.square');
     cells.forEach((square) => {
     square.addEventListener('mouseover', ()=>{
-            square.style.backgroundColor = 'black';
+            if (isDraw == true) {
+                square.style.backgroundColor = 'black';
+            }
+            if (isDraw == false) {
+                square.style.backgroundColor = 'rgb(175, 213, 247)';
+            }
     });
 });
     clear.addEventListener('click', () => {cells.forEach((square) => {

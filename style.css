@@ -8,7 +8,7 @@ body {
     background-color: rgb(45, 71, 65);
 }
 
-#select1 {
+#select1, #select2 {
   width: 120px;
   height:40px;
   background-color: blue;
@@ -38,7 +38,7 @@ body {
   justify-content: space-evenly;
 }
 
-.sizeSelect {
+.sizeSelect, .typeSelect {
   width: 100px;
   text-align: center;
   max-height: fit-content;
