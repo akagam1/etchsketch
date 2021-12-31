@@ -3,7 +3,6 @@ function randInt() {
     return Math.floor(Math.random()*256);
 }
 
-
 let gridContainer = document.getElementById("gridContainer");
 let cellSize = document.querySelector("#select1");
 let clear = document.getElementById("clear");
